@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+li {
+  list-style-type: none; }
+
+body {
+  background-color: #e1e5f2;
+  font-family: 'Kanit', sans-serif; }
+
+h3 {
+  padding-left: 30px;
+  font-weight: bold; }
+
+h4 {
+  color: #8f8585; }
+
+#fullHeader {
+  width: 100%;
+  background-image: linear-gradient(#022b3a, #e1e5f2);
+  padding-bottom: 10px; }
+  #fullHeader .header--top {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap; }
+  #fullHeader .header--logo {
+    width: 150px;
+    height: 150px; }
+  #fullHeader h1 {
+    align-self: center;
+    color: #bfdbf7;
+    letter-spacing: 5px;
+    text-decoration: line-through;
+    text-decoration-thickness: 1%;
+    text-decoration-style: double;
+    text-decoration-color: #e1e5f2;
+    text-transform: uppercase; }
+
+main {
+  margin: 0 20px 0 20px; }
+  main div .products--mainTitle {
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #022b3a; }
+  main div .products--secTitle {
+    color: #8f8585; }
+  main .products--Forsale {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+    main .products--Forsale #prod1 {
+      border-color: red; }
+    main .products--Forsale #prod2 {
+      border-color: red; }
+    main .products--Forsale #prod3 {
+      border-color: red; }
+    main .products--Forsale .product--Thumbnail {
+      border: 1px solid #022b3a;
+      text-align: center;
+      margin: 10px; }
+      main .products--Forsale .product--Thumbnail h2 {
+        color: #8f8585;
+        font-size: 1.5rem; }
+      main .products--Forsale .product--Thumbnail p {
+        color: #1f7a8c; }
+      main .products--Forsale .product--Thumbnail .priceThumbnail {
+        font-size: 20px; }
+  main .mainContainer {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1.2fr 1fr 1fr 0.5fr;
+    grid-template-areas: "promoCarousel promoCarousel" "promoProduct1 promoProduct2" "productComparison lessonsImage" "lessonsForm lessonsImage"; }
+    main .mainContainer .promoCarousel {
+      grid-area: promoCarousel; }
+      main .mainContainer .promoCarousel #imgCarousel {
+        max-width: 400px;
+        max-height: 400px;
+        margin: auto; }
+      main .mainContainer .promoCarousel p {
+        color: black; }
+    main .mainContainer .promoProduct1 {
+      grid-area: promoProduct1; }
+    main .mainContainer .promoProduct2 {
+      grid-area: promoProduct2; }
+      main .mainContainer .promoProduct2 .weekSale {
+        width: 500px;
+        height: 300px; }
+    main .mainContainer .productComparison {
+      grid-area: productComparison; }
+    main .mainContainer .lessonsForm {
+      grid-area: lessonsForm; }
+    main .mainContainer .lessonsImage {
+      grid-area: lessonsImage; }
+    main .mainContainer h2 {
+      color: #022b3a;
+      text-align: center;
+      text-transform: capitalize; }
+    main .mainContainer .productComparison {
+      color: #1f7a8c;
+      margin-left: 10px;
+      margin-right: 10px; }
+      main .mainContainer .productComparison thead {
+        background-color: #c0c0c0;
+        text-transform: uppercase; }
+      main .mainContainer .productComparison tbody {
+        background-color: #8f8585; }
+        main .mainContainer .productComparison tbody .noBullet {
+          list-style-type: none; }
+    main .mainContainer form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      border: 2px solid #1f7a8c;
+      color: #022b3a;
+      padding: 5px;
+      margin-bottom: 10px; }
+      main .mainContainer form h3 {
+        text-decoration: underline; }
+      main .mainContainer form p {
+        font-weight: bold;
+        font-style: italic; }
+  main .home__article--1 {
+    height: 100vh;
+    display: flex;
+    flex-wrap: nowrap; }
+    main .home__article--1 article {
+      width: 50%; }
+      main .home__article--1 article h3 {
+        margin-bottom: 40px;
+        text-align: center;
+        text-decoration: underline; }
+      main .home__article--1 article .home__img--brands {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly; }
+        main .home__article--1 article .home__img--brands .img--rounded {
+          border-radius: 85%; }
+    main .home__article--1 article .home__img--used {
+      display: flex;
+      justify-content: space-between; }
+      main .home__article--1 article .home__img--used .img--opacity:hover {
+        opacity: 90%; }
+  main .home__article--2 {
+    display: flex;
+    flex-wrap: wrap; }
+    main .home__article--2 article {
+      width: 50%; }
+      main .home__article--2 article h3 {
+        text-align: center; }
+      main .home__article--2 article .home__div--TR {
+        display: flex;
+        flex-wrap: wrap; }
+        main .home__article--2 article .home__div--TR .img--face {
+          width: 200px;
+          height: 200px;
+          border-radius: 90%;
+          position: absolute; }
+        main .home__article--2 article .home__div--TR .img--face:hover {
+          opacity: 80%; }
+        main .home__article--2 article .home__div--TR .img--aaron {
+          margin-top: 250px; }
+        main .home__article--2 article .home__div--TR .img--airton {
+          margin-top: 150px;
+          margin-left: 200px; }
+        main .home__article--2 article .home__div--TR .img--mika {
+          margin-left: 400px; }
+    main .home__article--2 article {
+      width: 50%; }
+      main .home__article--2 article h3 {
+        text-align: center; }
+      main .home__article--2 article .home--spot {
+        display: flex;
+        flex-direction: column; }
+        main .home__article--2 article .home--spot iframe {
+          align-self: center;
+          margin: 10px 0 10px 0; }
+
+footer {
+  padding: 10px 30px;
+  background-image: linear-gradient(#e1e5f2, #022b3a); }
+  footer .footerNav {
+    color: #bfdbf7; }
+    footer .footerNav li {
+      display: block; }
+      footer .footerNav li a {
+        color: #bfdbf7;
+        text-decoration: none; }
+  footer .footer1 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+    footer .footer1 .subscribe {
+      color: #022b3a; }
+    footer .footer1 .miniLogo {
+      width: 100px;
+      height: 100px; }
+    footer .footer1 .socialNetwork {
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      text-decoration: none; }
+      footer .footer1 .socialNetwork a {
+        color: #022b3a; }
+  footer .footer2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center; }
+
+@media only screen and (min-width: 768px) {
+  main .mainContainer {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 0.4fr 0.4fr;
+    grid-template-rows: 1.2fr 1fr 1fr 0.5fr;
+    grid-template-areas: "promoCarousel promoCarousel" "promoProduct1 promoProduct2" "productComparison lessonsImage" "lessonsForm lessonsImage"; } }
+
+@media only screen and (max-width: 768px) and (min-width: 376px) {
+  main .mainContainer {
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: "promoProduct1" "promoProduct2" "productComparison" "lessonsForm"; }
+  .promoCarousel {
+    display: none; }
+  .lessonsImage img {
+    display: none; } }
+
+@media only screen and (max-width: 375px) {
+  main .mainContainer {
+    display: grid;
+    gap: 5px 5px;
+    grid-template-columns: 0.2fr;
+    grid-template-rows: 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: "promoProduct1" "promoProduct2" "lessonsForm"; }
+    main .mainContainer .productComparison {
+      display: none; }
+    main .mainContainer .promoCarousel {
+      display: none; }
+    main .mainContainer .lessonsImage {
+      display: none; }
+    main .mainContainer .promoProduct1 iframe {
+      max-width: 300px;
+      max-height: 100px; }
+    main .mainContainer .promoProduct2 a img {
+      max-width: 300px;
+      max-height: 100px; }
+    main .mainContainer .spotify {
+      display: none; }
+    main .mainContainer .socialNetwork span {
+      display: none; }
+    main .mainContainer .footer1 {
+      display: flex;
+      flex-wrap: wrap; } }
