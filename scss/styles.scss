@@ -59,6 +59,10 @@ $priceFontsize:10px;
         text-decoration-color: #e1e5f2;
         text-transform: uppercase;
     }
+        .col-12 {
+        width: auto;
+        }
+    
 }
 
 // Main container//
@@ -105,9 +109,10 @@ main {
             }
         }
     .mainContainer {
+        justify-items: center;
         display: grid;
         gap: 10px;
-        grid-template-columns: 0.5fr 0.5fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1.2fr 1fr 1fr 0.5fr;
         grid-template-areas: "promoCarousel promoCarousel"
                             "promoProduct1 promoProduct2"
@@ -281,6 +286,7 @@ footer {
         }
         .footer1 {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-around;
             align-items: center; 
                 .subscribe {
@@ -310,36 +316,46 @@ footer {
 // Media Queries //
 
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1200px) {
     main .mainContainer {
+        justify-content: space-around;
         display: grid;
         gap: 5px;
-        grid-template-columns: 0.4fr 0.4fr;
+        grid-template-columns: 1fr 1fr;
         grid-template-rows: 1.2fr 1fr 1fr 0.5fr;
         grid-template-areas: "promoCarousel promoCarousel"
                             "promoProduct1 promoProduct2"
                             "productComparison lessonsImage"
-                            "lessonsForm lessonsImage";
+                            "lessonsForm lessonsForm";
+        .lessonsForm {
+            margin: 20px 0 20px 0;
+            justify-self: center;
+        }
     }
 }
 
 
-@media only screen and (max-width: 768px) and (min-width: 376px) {
+@media only screen and (max-width: 1200px) and (min-width: 376px) {
     main    .mainContainer {
+        justify-content: space-between;
+        width: 100%;
         display: grid;
         gap: 5px;
-        grid-template-columns: 0.5fr;
-        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr;
-        grid-template-areas: "promoProduct1"
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+        grid-template-areas: "promoCarousel"
+                            "promoProduct1"
                             "promoProduct2"
-                            "productComparison"
-                            "lessonsForm"; 
-    }
-    .promoCarousel {
-        display: none;
+                            "lessonsForm" 
+                            "productComparison";
     }
     .lessonsImage {
         img {
+            display: none;
+        }
+    }
+    footer {
+        .spotify {
             display: none;
         }
     }
@@ -380,7 +396,8 @@ footer {
                 }
             }
         }
-        .spotify {
+    }
+        footer .spotify {
             display: none;
         }
         
@@ -393,5 +410,4 @@ footer {
             display: flex;
             flex-wrap: wrap; 
         } 
-    }
 }
