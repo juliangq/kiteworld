@@ -42,7 +42,8 @@ h4 {
     text-decoration-color: #e1e5f2;
     text-transform: uppercase; }
   #fullHeader .col-12 {
-    width: auto; }
+    width: auto;
+    max-width: 180px; }
 
 main {
   margin: 0 20px 0 20px; }
@@ -57,17 +58,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; }
-    main .products--Forsale #prod1 {
-      border-color: red; }
-    main .products--Forsale #prod2 {
-      border-color: red; }
-    main .products--Forsale #prod3 {
-      border-color: red; }
     main .products--Forsale .product--Thumbnail {
       border: 1px solid #022b3a;
       text-align: center;
       margin: 10px; }
       main .products--Forsale .product--Thumbnail h2 {
+        padding-top: 10px;
         color: #8f8585;
         font-size: 1.5rem; }
       main .products--Forsale .product--Thumbnail p {
@@ -87,6 +83,9 @@ main {
         max-width: 400px;
         max-height: 400px;
         margin: auto; }
+      main .mainContainer .promoCarousel h4 {
+        text-shadow: 2px 2px #000000;
+        color: #00a8c4; }
       main .mainContainer .promoCarousel p {
         color: black; }
     main .mainContainer .promoProduct1 {
@@ -131,6 +130,8 @@ main {
       main .mainContainer form p {
         font-weight: bold;
         font-style: italic; }
+      main .mainContainer form .form-comment {
+        padding-bottom: 10px; }
   main .home__article--1 {
     height: 100vh;
     display: flex;
@@ -247,6 +248,8 @@ footer {
     display: none; } }
 
 @media only screen and (max-width: 375px) {
+  main .products--Forsale {
+    justify-content: center; }
   main .mainContainer {
     display: grid;
     gap: 5px 5px;

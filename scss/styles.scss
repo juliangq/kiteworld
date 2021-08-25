@@ -61,6 +61,7 @@ $priceFontsize:10px;
     }
         .col-12 {
         width: auto;
+        max-width: 180px;
         }
     
 }
@@ -85,16 +86,12 @@ main {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between; 
-            @for $i from 1 through 3 {
-                #prod#{$i}{
-                    border-color: red;
-                }
-            }
             .product--Thumbnail {
                 border: 1px solid #022b3a;
                 text-align: center;
                 margin: 10px; 
                 h2 {
+                    padding-top: 10px;
                     color:#8f8585;
                     font-size: 1.5rem;
                 }
@@ -124,6 +121,10 @@ main {
                 max-width: 400px;
                 max-height: 400px;
                 margin: auto;
+            }
+            h4 {
+                text-shadow: 2px 2px #000000;
+                color: #00a8c4;
             }
             p {
                 color: black;
@@ -187,6 +188,9 @@ main {
                     font-weight: bold;
                     font-style: italic; 
                 }
+                .form-comment {
+                    padding-bottom: 10px;
+                    }                
         }
     }
     .home__article--1 {
@@ -335,6 +339,7 @@ footer {
 }
 
 
+
 @media only screen and (max-width: 1200px) and (min-width: 376px) {
     main    .mainContainer {
         justify-content: space-between;
@@ -365,29 +370,33 @@ footer {
 
 
 @media only screen and (max-width: 375px) {
-    main .mainContainer {
-        display: grid;
-        gap: 5px 5px;
-        grid-template-columns: 0.2fr;
-        grid-template-rows: 0.2fr 0.2fr 0.2fr;
-        grid-template-areas: "promoProduct1"
-                            "promoProduct2"
-                            "lessonsForm";
-        .productComparison {
-            display: none; 
+    main {
+        .products--Forsale {
+            justify-content: center;
         }
-        .promoCarousel {
-            display: none;
-        }
-        .lessonsImage {
-            display: none;
-        }
-        .promoProduct1 {
-            iframe {
-                max-width: 300px;
-                max-height: 100px;
+        .mainContainer {
+            display: grid;
+            gap: 5px 5px;
+            grid-template-columns: 0.2fr;
+            grid-template-rows: 0.2fr 0.2fr 0.2fr;
+            grid-template-areas: "promoProduct1"
+            "promoProduct2"
+            "lessonsForm";
+            .productComparison {
+                display: none; 
             }
-        }
+            .promoCarousel {
+                display: none;
+            }
+            .lessonsImage {
+                display: none;
+            }
+            .promoProduct1 {
+                iframe {
+                    max-width: 300px;
+                    max-height: 100px;
+                }
+            }
         .promoProduct2 {
             a {
                 img {
@@ -397,14 +406,15 @@ footer {
             }
         }
     }
-        footer .spotify {
+}
+    footer .spotify {
+        display: none;
+    }
+    
+    .socialNetwork {
+        span {
             display: none;
         }
-        
-        .socialNetwork {
-            span {
-                display: none;
-            }
         }
         .footer1 {
             display: flex;
