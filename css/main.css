@@ -270,11 +270,9 @@ footer {
     display: grid;
     gap: 5px 5px;
     grid-template-columns: 0.2fr;
-    grid-template-rows: 0.2fr 0.2fr 0.2fr;
-    grid-template-areas: "promoProduct1" "promoProduct2" "lessonsForm"; }
+    grid-template-rows: 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-areas: "promoCarousel" "promoProduct1" "promoProduct2" "lessonsForm"; }
     main .mainContainer .productComparison {
-      display: none; }
-    main .mainContainer .promoCarousel {
       display: none; }
     main .mainContainer .lessonsImage {
       display: none; }
