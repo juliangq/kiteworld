@@ -47,6 +47,13 @@ h4 {
 
 main {
   margin: 0 20px 0 20px; }
+  main .containerError {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8f8585; }
+    main .containerError a {
+      color: white; }
   main div .products--mainTitle {
     text-transform: uppercase;
     text-decoration: underline;
@@ -59,6 +66,7 @@ main {
     flex-wrap: wrap;
     justify-content: space-between; }
     main .products--Forsale .product--Thumbnail {
+      max-width: 250px;
       border: 1px solid #022b3a;
       text-align: center;
       margin: 10px; }
@@ -231,7 +239,10 @@ footer {
     grid-template-areas: "promoCarousel promoCarousel" "promoProduct1 promoProduct2" "productComparison lessonsImage" "lessonsForm lessonsForm"; }
     main .mainContainer .lessonsForm {
       margin: 20px 0 20px 0;
-      justify-self: center; } }
+      justify-self: center; }
+  footer .footer--Subscribe {
+    display: flex;
+    flex-direction: column; } }
 
 @media only screen and (max-width: 1200px) and (min-width: 376px) {
   main .mainContainer {
@@ -244,10 +255,15 @@ footer {
     grid-template-areas: "promoCarousel" "promoProduct1" "promoProduct2" "lessonsForm"  "productComparison"; }
   .lessonsImage img {
     display: none; }
+  footer .footer--Subscribe {
+    display: flex;
+    flex-direction: column; }
   footer .spotify {
     display: none; } }
 
 @media only screen and (max-width: 375px) {
+  main .containerError {
+    flex-direction: row; }
   main .products--Forsale {
     justify-content: center; }
   main .mainContainer {
@@ -268,10 +284,13 @@ footer {
     main .mainContainer .promoProduct2 a img {
       max-width: 300px;
       max-height: 100px; }
+  footer .footer--Subscribe {
+    display: flex;
+    flex-direction: column; }
   footer .spotify {
     display: none; }
-  .socialNetwork span {
+  footer .socialNetwork span {
     display: none; }
-  .footer1 {
+  footer .footer1 {
     display: flex;
     flex-wrap: wrap; } }

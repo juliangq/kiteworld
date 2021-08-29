@@ -70,6 +70,15 @@ $priceFontsize:10px;
 
 main {
     margin: 0 20px 0 20px;
+        .containerError {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #8f8585;
+                a {
+                    color: white;
+                }
+        }
         // Diseño de Productos a la venta//
         div {
             .products--mainTitle {
@@ -87,6 +96,7 @@ main {
             flex-wrap: wrap;
             justify-content: space-between; 
             .product--Thumbnail {
+                max-width: 250px;
                 border: 1px solid #022b3a;
                 text-align: center;
                 margin: 10px; 
@@ -336,6 +346,12 @@ footer {
             justify-self: center;
         }
     }
+    footer {
+        .footer--Subscribe {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 }
 
 
@@ -360,6 +376,10 @@ footer {
         }
     }
     footer {
+        .footer--Subscribe {
+            display: flex;
+            flex-direction: column;
+        }
         .spotify {
             display: none;
         }
@@ -371,6 +391,9 @@ footer {
 
 @media only screen and (max-width: 375px) {
     main {
+        .containerError {
+            flex-direction: row;
+        }
         .products--Forsale {
             justify-content: center;
         }
@@ -407,17 +430,22 @@ footer {
         }
     }
 }
-    footer .spotify {
-        display: none;
-    }
-    
-    .socialNetwork {
-        span {
-            display: none;
+    footer {
+        .footer--Subscribe {
+            display: flex;
+            flex-direction: column;
         }
+        .spotify {
+            display: none;
+        }    
+        .socialNetwork {
+            span {
+                display: none;
+            }
         }
         .footer1 {
             display: flex;
             flex-wrap: wrap; 
         } 
+    }
 }
